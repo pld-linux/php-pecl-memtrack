@@ -4,11 +4,12 @@ Summary:	watch memory consumption in PHP scripts
 Summary(pl.UTF-8):	monitorowanie zużycia pamięci w skryptach PHP
 Name:		php-pecl-%{_modname}
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	d9de34a4e603cd7f68e874b04492125e
+Source1:	%{name}.ini
 URL:		http://pecl.php.net/package/memtrack/
 BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.344
@@ -46,10 +47,8 @@ install -d $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT \
 	EXTENSION_DIR=%{php_extensiondir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
-EOF
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
 
 %clean
 rm -rf $RPM_BUILD_ROOT
