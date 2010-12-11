@@ -4,7 +4,7 @@ Summary:	%{modname} - watch memory consumption in PHP scripts
 Summary(pl.UTF-8):	%{modname} - monitorowanie zużycia pamięci w skryptach PHP
 Name:		php-pecl-%{modname}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
