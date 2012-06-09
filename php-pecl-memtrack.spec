@@ -3,12 +3,12 @@
 Summary:	%{modname} - watch memory consumption in PHP scripts
 Summary(pl.UTF-8):	%{modname} - monitorowanie zużycia pamięci w skryptach PHP
 Name:		php-pecl-%{modname}
-Version:	0.2.0
-Release:	2
+Version:	0.2.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	5f50c25acbff5e90b31229215fe22c50
+# Source0-md5:	6cdf83e24fab5982a3c264ce12503d12
 Source1:	%{name}.ini
 URL:		http://pecl.php.net/package/memtrack/
 BuildRequires:	php-devel >= 3:5.0.0
